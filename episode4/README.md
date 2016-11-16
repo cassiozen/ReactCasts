@@ -1,5 +1,32 @@
-# ReactCasts Episode 4: Context (Part 1)
+# Contexts (Part 1)
 
-I wish context was a smooth and straightforward topic but it’s not. It’s one of those concepts you’ll think you understand 100% but ever so often you’ll find yourself dealing with annoying issues crawling out of the woodwork. Then you’ll be spending a lot of time mapping all of the nooks and crannies those issues have been nesting…
+ReactCasts, episode 4.
 
-That’s why this is a two-part video. I’ll start with the basics, and along the way I’ll point a few potential problems. On the next video I’ll show how to deal with these potential problems and build a robust solution.
+This is part one of a two-part screencast. Context makes it possible to pass data through the component hierarchy, without needing intermediate components to know about it. It can be useful for data that never (or rarely) change, such as theming and localization, and this screencast shows how to use Context using localization as example.
+
+Screencast video:
+https://www.youtube.com/watch?v=lxq938kqIss
+
+# Outline
+
+- What is Context
+- Example: The sample application
+- Comparing with props
+- Brief overview of potential problems
+- Example: Providing a Context
+- Example: Consuming a Context
+- Example: Updating Context
+
+# Build & Run Instructions
+
+1. To build and run the code in this directory, ensure you have [npm](https://www.npmjs.com) installed
+
+2. Install
+```
+npm install
+```
+
+3. Start the application
+```
+npm start
+```
