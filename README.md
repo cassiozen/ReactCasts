@@ -2,6 +2,9 @@
 
 This repository has code and outlines for [ReactCasts](https://www.youtube.com/channel/UCZkjWyyLvzWeoVWEpRemrDQ). All content (code samples, outlines, etc...) is organized into folders, starting with [`episode1`](https://github.com/cassiozen/ReactCasts/tree/master/episode1) and going from there.
 
+
+Full videos at the [YouTube Channel](https://www.youtube.com/channel/UCZkjWyyLvzWeoVWEpRemrDQ).
+
 # Request A Screencast
 
 I have some ideas for topics to cover, but if you want to see some topics covered in a future screencast, I'd like to hear from you.
