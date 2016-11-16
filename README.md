@@ -10,11 +10,15 @@ Please [submit an issue](https://github.com/cassiozen/ReactCasts/issues) with th
 
 You can also participate by adding your reactions and contributing to the discussion on suggested topics: https://github.com/cassiozen/ReactCasts/issues/labels/request%20a%20screencast.
 
+# Curious about what's comming next?
+
+You can follow the [Production Workflow Project](https://github.com/cassiozen/ReactCasts/projects/1) to see which screencasts are scheduled next.
+
 # Issues With Code, Documentation, etc...
 
 If you see any problems with code, documentation, or anything else in this repository, please [submit an issue](https://github.com/cassiozen/ReactCasts/issues) with the `bug` label and I'll fix it as soon as I can. Pull requests are also welcome.
 
-# Build, Test and Run Instructions
+# Run Instructions
 
 All the folders that start with `episode` (such as [`episode1`](https://github.com/cassiozen/ReactCasts/tree/master/episode1) contain the outline and code samples for that episode, and all code samples can be built and run.
 
