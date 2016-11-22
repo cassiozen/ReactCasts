@@ -1,0 +1,97 @@
+h1 {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(0, 0, 0, .15);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.panel {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .25) 0 1px 6px;
+  background-color: #ddd;
+  margin: 15px;
+  padding: 10px;
+  width: 664px;
+  height: 400px;
+  z-index: 10;
+}
+
+
+.internalPanel {
+  position: relative;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .25) 0 1px 6px;
+  background-color: #999;
+  margin: 30px;
+  padding: 10px;
+  width: 600px;
+  height: 300px;
+  z-index: 20;
+}
+
+
+.contentPanel {
+  position: relative;
+  border-radius: 2px;
+  border: solid 1px #777;
+  background-color: #909090;
+  margin: 30px;
+  padding: 10px;
+  width: 520px;
+  height: 200px;
+  z-index: 30;
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: #444;
+  color: rgba(0,0,0,.8);
+  border: 1px solid #999;
+  border: 0 rgba(0,0,0,0);
+  background-color: #bbb;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));
+    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.05) 0,rgba(0,0,0,.1));
+    background-image: -o-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+}
+
+button:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+    border-color: #000\9;
+}
+
+button:focus {outline:0;}
+
+nav {
+  float:right;
+}
+a {
+  margin-right: 10px;
+  cursor: pointer;
+}
