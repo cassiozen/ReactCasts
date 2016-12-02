@@ -6,7 +6,7 @@ Hot Module Replacement (or HMR) is a Webpack feature that allows "on the fly" mo
 Create-React-App uses webpack internally, but HMR working out-of-the-box only for for stylesheets (and not for React components). This episode discusses the resoning behind this and shows two ways you can add Hot Module Replacement to projects created with Create-React-App.
 
 Screencast video:
-https://youtu.be/hcl3lNjgj-E
+https://youtu.be/f-ctxG2qEps
 
 # Outline
 
