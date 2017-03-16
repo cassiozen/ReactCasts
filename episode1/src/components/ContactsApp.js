@@ -13,12 +13,12 @@ class ContactsApp extends Component {
   static propTypes = {
     contacts: PropTypes.arrayOf(
       PropTypes.shape({
-        thumbnail: React.PropTypes.string.isRequired,
-        name: React.PropTypes.string.isRequired,
-        email: React.PropTypes.string
+        thumbnail: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string
       })
     ).isRequired,
-    loadingTime: PropTypes.number
+    loadingTime: PropTypes.string
   }
 
   handleUserInput = (searchTerm) => {
