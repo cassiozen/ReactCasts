@@ -1,0 +1,29 @@
+{
+  "name": "reactcasts-episode9",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "quokka": {
+    "babel": {
+      "env": "development"
+    }
+  },
+  "scripts": {
+    "start": "NODE_ENV=development babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallabyjs/quokka-babel-import-sample.git"
+  },
+  "author": "Cassio Zen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wallabyjs/quokka-babel-import-sample/issues"
+  },
+  "homepage": "https://github.com/wallabyjs/quokka-babel-import-sample#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-react-app": "^2.2.0"
+  }
+}
