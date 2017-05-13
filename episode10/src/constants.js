@@ -1,0 +1,15 @@
+export const LOG_USER = 'LOG_USER';
+export const LOGGED_USER = 'LOGGED_USER';
+export const USER_FAILURE = 'USER_FAILURE';
+
+export const BOOK_REQUESTING = 'BOOK_REQUESTING';
+export const BOOK_SUCCESS = 'BOOK_SUCCESS';
+export const BOOK_FAILURE = 'BOOK_FAILURE';
+
+export const SIMILAR_REQUESTING = 'SIMILAR_REQUESTING';
+export const SIMILAR_SUCCESS = 'SIMILAR_SUCCESS';
+export const SIMILAR_FAILURE = 'SIMILAR_FAILURE';
+
+export const ADDED_TO_CART = 'ADDED_TO_CART';
+
+export const TOGGLE_SIDEBAR = 'TOGGLE_SIDEBAR';

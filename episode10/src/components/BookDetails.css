@@ -1,0 +1,28 @@
+.cover {
+  display: block;
+  height: 305px;
+  float: left;
+  margin-right: 15px;
+}
+
+.segment::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.similar {
+  margin-top: 29px;
+}
+
+.similar_cover {
+  display: block;
+  height: 125px;
+  float: left;
+  margin-right: 15px;
+}
+
+.segment .ui.button {
+  display: block;
+  margin: 15px 0;
+}

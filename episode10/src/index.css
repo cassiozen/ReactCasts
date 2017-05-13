@@ -1,0 +1,29 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+
+h2 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+h3 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #773;
+}
+
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
