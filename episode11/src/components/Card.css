@@ -1,0 +1,35 @@
+.card {
+  float: left;
+  width: 360px;
+  margin: 10px;
+  padding: 16px 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 #d9d9d9;
+}
+
+.card.open .header::before {
+  content: "▼ "
+}
+
+.card.closed .header::before {
+  content: "► "
+}
+
+
+
+.header {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.card.closed .body {
+  display: none;
+}
+
+
+.body > img {
+  margin: 16px -24px 16px;
+  width: calc(100% + 16px + 16px + 16px);
+}
