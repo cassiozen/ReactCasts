@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 15px;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 12px 0;
+}
+
+.home {
+  font-family: "Avenir Light", Helvetica, Arial, sans-serif;
+  background-color: #f6f6ef;
+}
+
+.home::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+aside {
+  float: left;
+  text-align: right;
+  width: 8%;
+  color: #999;
+}
+
+article {
+  float: left;
+  padding: 0 30px;
+  width: 45%;
+}
+
+figure {
+  float: right;
+  margin: 0;
+  padding: 50px 0 0 15px;
+  width: 47%;
+}
