@@ -1,0 +1,59 @@
+body {
+  padding: 0 35px;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.newslist {
+  background-color: #f6f6ef;
+}
+
+.header {
+  background-color: #6b32e1;
+  padding: 3px;
+}
+.home {
+  font-family: "Avenir Light", Helvetica, Arial, sans-serif;
+  background-color: #f6f6ef;
+}
+
+.home::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+aside {
+  display: block;
+  position: absolute;
+  text-align: right;
+  width: 8%;
+  margin-left: -6%;
+  color: #999;
+}
+
+article {
+  float: left;
+  padding: 0 0 0 52px;
+  width: 35%;
+}
+
+figure {
+  float: right;
+  width: 48.5%;
+}
+
+/*# sourceMappingURL=main.css.map*/
