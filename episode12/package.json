@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start-dev": "NODE_ENV=development webpack -w & NODE_ENV=development node server.js",
+    "start-dev": "npm-run-all --parallel start-webpack:dev start-server:dev",
+    "start-webpack:dev": "cross-env NODE_ENV=development webpack -w",
+    "start-server:dev": "cross-env NODE_ENV=development node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,9 +22,11 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-react-app": "^3.0.1",
+    "cross-env": "^5.1.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "npm-run-all": "^4.1.2",
     "postcss-loader": "^2.0.6",
     "webpack": "^3.1.0"
   }
