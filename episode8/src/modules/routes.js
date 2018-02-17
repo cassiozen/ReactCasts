@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import App from '../App.js';
-import RoomContainer from '../rooms/ui/container/room-container';
+import RoomContainer from '../containers/room-container';
 
 export default (
 	<Switch>

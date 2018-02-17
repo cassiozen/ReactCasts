@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import logo from '../../../logo.png';
+import logo from '../logo.png';
 
 class RoomContainer extends Component {
     render() {
