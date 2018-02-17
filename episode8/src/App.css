@@ -21,6 +21,12 @@
   text-align: right !important;
 }
 
+#list-rooms a{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 @media (min-width: 300px){
   .container {
     margin: 0 auto;
