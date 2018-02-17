@@ -47,3 +47,15 @@ h5 {
 h6 {
   font-size: 1.1em;
 }
+
+.white{
+  background-color: white !important;
+}
+
+.slideshow{
+  height: 100%;
+}
+
+.slideshow img {
+  height: 100%;
+}

@@ -1,23 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { compose, createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux';
-import thunkMiddleware from 'redux-thunk';
-import App from './App';
-import reducer from './reducers';
+import ReactDOM from 'react-dom';
+import { configureStore, history } from './store/configStore';
+import Root from './modules/root';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = configureStore();
 
-const store = createStore(
-  reducer, composeEnhancers(
-    applyMiddleware(thunkMiddleware)
-  )
-);
-
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+ReactDOM.render(
+    <div>
+        <Root store={store} history={history} />
+    </div>,
+    document.getElementById('root')
 );

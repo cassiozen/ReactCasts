@@ -4,7 +4,8 @@ import './SlideShow.css';
 
 export default function SlideShow(){
   return (
-    <div className='slideshow' style={{ backgroundImage: `url(${background})` }}>
+    <div className="slideshow">
+      <img src={background}  alt="..." />
     </div>
   );
 };
