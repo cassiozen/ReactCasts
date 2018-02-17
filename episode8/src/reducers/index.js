@@ -10,7 +10,7 @@ const reducer = combineReducers({
 
 export const selectUserName = (state) => fromAuth.selectUserName(state.auth);
 
-export const selectUserReservation = (state) => state.auth.user.reservation;
+export const selectUserReservation = (state) => state.auth.user.reservation || {};
 export const selectRoomList = (state) => state.rooms.list;
 export const selectUserRoom = createSelector(
   selectUserReservation, selectRoomList,
