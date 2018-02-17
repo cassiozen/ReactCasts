@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+#redux-inn-logo .text-right{
+  text-align: right !important;
+}
+
 @media (min-width: 300px){
   .container {
     margin: 0 auto;
@@ -62,4 +66,126 @@
 
 .row .col-md-4{
   padding-top: 5px;
+}
+
+#about-hotel .title h6{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #af9a5f;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+}
+
+#about-hotel .title h3{
+  font-family: 'TrajanProRegular';
+  font-size: 38px;
+  line-height: 38px;
+  color:white;
+  font-weight: 700;
+  padding-bottom: 28px;
+}
+
+
+#about-hotel .title h1 {
+	font-family: 'TrajanProRegular';
+	font-size: 38px;
+	line-height: 38px;
+	color: #333333;
+	font-weight: 700;
+	padding-bottom: 28px;
+}
+
+#about-hotel .cap {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  padding-bottom: 25px;
+}
+
+#about-hotel .col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+#about-hotel .cap > span::before, .cap > span::after {
+	border-top: 1px solid #464646;
+}
+
+#about-hotel .cap span::before {
+	margin-right: 5px;
+	right: 100%;
+}
+
+#about-hotel .cap > span::before, .cap > span::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 9999px;
+}
+
+#about-hotel .cap > span::before, .cap > span::after {
+	border-top: 1px solid #464646;
+}
+
+#about-hotel .cap span::after {
+	left: 100%;
+	margin-left: 5px;
+}
+
+#about-hotel .cap > span::before, .cap > span::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 9999px;
+}
+
+#about-hotel .cap > span {
+	display: inline-block;
+	position: relative;
+}
+
+#about-hotel .title p {
+	font-family: 'Vollkorn', serif;
+	font-size: 18px;
+	line-height: 30px;
+	color: white ;
+	font-style: italic;
+	font-weight: 400;
+	padding: 0 28px;
+}
+
+#about-hotel #content {
+	float: left;
+	width: 100%;
+}
+
+#about-hotel .common-bg {
+	background-color: #f9f5ec;
+}
+
+#about-hotel .title-color {
+	padding: 43px 0px 38px;
+	background-color: #E3DED3;
+	display: table;
+	width: 100%;
+}
+
+#about-hotel .title-color h2 {
+	color: #333;
+	float: left;
+	font-family: "TrajanProBold";
+	font-size: 24px;
+	line-height: 19px;
+	font-weight: 400;
+	margin: 0;
+}
+
+#about-hotel .title-color .breadcrumb {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	float: right;
 }
