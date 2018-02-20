@@ -11,6 +11,7 @@ import RoomComponent from '../components/RoomComponent';
 import SlideShow from '../components/SlideShow';
 import AboutHotel from '../components/AboutHotel';
 import OurRoomComponent from '../components/OurRoomComponent';
+import SelectedRoomComponent from '../components/SelectedRoomComponent';
 
 class HomeContainer extends Component {
 
@@ -29,7 +30,7 @@ class HomeContainer extends Component {
         if (isFetching || isFetching === undefined) return <div className="loader" />;
 
         var selectedRoomInfo = rooms.find(data => data.id == selectedRoomId);
-
+        console.log("Render HomeContainer >>>");
         return (
             <div className="App">
                 <div className="container-full">
@@ -54,38 +55,39 @@ class HomeContainer extends Component {
                                         (!isFetching && rooms.length > 0) && rooms.map((data, index) => {
                                             return (
                                                 <div className="col-md-4" key={index}>
-                                                    <RoomComponent key={index} id={data.imageId} roomInfo={data} onClick={this.handleOnRoomSelect}/>
+                                                    <RoomComponent key={index} id={data.imageId} roomInfo={data} onClick={this.handleOnRoomSelect} />
                                                 </div>
                                             )
                                         })
                                     }
                                 </div>
                                 <hr className="white" />
-                                {/* <div className="row ">
-                                    <div className="col-md-4">
-                                        <RoomComponent id={1} roomInfo={}/>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <RoomComponent id={2} />
-                                    </div>
-                                    <div className="col-md-4">
-                                        <RoomComponent id={3} />
-                                    </div>
-                                    <div className="col-md-4">
-                                        <RoomComponent id={4} />
-                                    </div>
-                                </div>
-                                <hr className="white" /> */}
                                 <div className="row ">
                                 </div>
-
                             </div>
                             <div className="col-md-6">
-                                <SlideShow roomInfo = {selectedRoomInfo} />
+                                {!!(selectedRoomInfo) ? (
+                                    <SelectedRoomComponent roomInfo={selectedRoomInfo} />
+                                ) : (
+                                <div>
+                                    <SlideShow ImageId={1} />
+                                  <SlideShow ImageId={2} />
+                                </div>
+                                  
+                                )}
+                                
                             </div>
-
+                            
                         </div>
 
+                        {/**Second Row **/}
+                        <div className="row">
+                            <div className="col-md-6">
+                            </div>
+                            <div className="col-md-6">
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
