@@ -75,7 +75,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 6,
         guests: 3,
-        roomType: "ROOM",
+        roomType: "SUITES",
       },
       {
         id: "ovsuite",

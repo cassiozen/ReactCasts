@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as AuthActions from '../actions/auth';
 import * as RoomActions from '../actions/rooms';
-import { selectUserName, selectUserRoom, selectFilteredRoom } from '../reducers';
+import { selectUserName, selectUserRoom, selectFilteredRoom, selectFilteredRoomBySort } from '../reducers';
 import logo from '../logo.png';
 import '../App.css';
 import RoomComponent from '../components/RoomComponent';
@@ -13,6 +13,7 @@ import AboutHotel from '../components/AboutHotel';
 import RoomInfoComponent from '../components/RoomInfoComponent';
 import SelectedRoomComponent from '../components/SelectedRoomComponent';
 import FilterComponent from '../components/FilterComponent';
+import SortComponent from '../components/SortComponent';
 
 
 class HomeContainer extends Component {
@@ -31,8 +32,12 @@ class HomeContainer extends Component {
         this.props.roomActions.setFilter(filter);
     }
 
+    handleOnSort = (sortBy) => {
+        this.props.roomActions.setSort(sortBy);
+    }
+
     render() {
-        const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter } = this.props;
+        const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter, selectedSort } = this.props;
         if (isFetching || isFetching === undefined) return <div className="loader" />;
 
         var selectedRoomInfo = rooms.find(data => data.id == selectedRoomId);
@@ -59,6 +64,7 @@ class HomeContainer extends Component {
 
                                 <div id="filter">
                                     <span> Filter  <FilterComponent onChange = {this.handleOnFilter} selectedFilter={selectedfilter}/> </span> 
+                                    <span style={{marginLeft:30}}> Sort  <SortComponent onChange = {this.handleOnSort} selectedSort={selectedSort}/> </span> 
                                 </div>
                                 <hr className="white" />
                                 <div id="list-rooms" className="row ">
@@ -112,14 +118,16 @@ const mapStateToProps = (state) => {
     const { auth, rooms } = state;
     const isFetching = auth.isFetching || rooms.isFetching;
     const filter = state.filter;
+    const sortBy = state.sort;
 
     return {
         isFetching,
         selectedRoomId: rooms.selectedRoomId,
-        rooms: selectFilteredRoom(state),
+        rooms: selectFilteredRoomBySort(state),
         userName: selectUserName(state),
         accomodation: selectUserRoom(state),
         selectedfilter: filter,
+        selectedSort: sortBy
     };
 };
 

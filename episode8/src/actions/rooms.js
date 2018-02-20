@@ -45,3 +45,7 @@ export function RoomSelection(roomId) {
 export function setFilter(filter) {
   return { type: 'SET_FILTER', filter }
 }
+
+export function setSort(sortBy) {
+  return { type: 'SET_SORT', sortBy }
+}
