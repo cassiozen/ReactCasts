@@ -4,14 +4,16 @@ import { bindActionCreators } from 'redux';
 
 import * as AuthActions from '../actions/auth';
 import * as RoomActions from '../actions/rooms';
-import { selectUserName, selectUserRoom } from '../reducers';
+import { selectUserName, selectUserRoom, selectFilteredRoom } from '../reducers';
 import logo from '../logo.png';
 import '../App.css';
 import RoomComponent from '../components/RoomComponent';
 import SlideShow from '../components/SlideShow';
 import AboutHotel from '../components/AboutHotel';
-import OurRoomComponent from '../components/OurRoomComponent';
+import RoomInfoComponent from '../components/RoomInfoComponent';
 import SelectedRoomComponent from '../components/SelectedRoomComponent';
+import FilterComponent from '../components/FilterComponent';
+
 
 class HomeContainer extends Component {
 
@@ -25,11 +27,16 @@ class HomeContainer extends Component {
         this.props.roomActions.RoomSelection(roomId);
     }
 
+    handleOnFilter = (filter) => {
+        this.props.roomActions.setFilter(filter);
+    }
+
     render() {
-        const { isFetching, userName, accomodation, rooms, selectedRoomId } = this.props;
+        const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter } = this.props;
         if (isFetching || isFetching === undefined) return <div className="loader" />;
 
         var selectedRoomInfo = rooms.find(data => data.id == selectedRoomId);
+
         console.log("Render HomeContainer >>>");
         return (
             <div className="App">
@@ -47,7 +54,11 @@ class HomeContainer extends Component {
                                 </div>
 
                                 <div className="row mt-5">
-                                    <OurRoomComponent />
+                                    <RoomInfoComponent />
+                                </div>
+
+                                <div id="filter">
+                                    <span> Filter  <FilterComponent onChange = {this.handleOnFilter} selectedFilter={selectedfilter}/> </span> 
                                 </div>
                                 <hr className="white" />
                                 <div id="list-rooms" className="row ">
@@ -69,23 +80,21 @@ class HomeContainer extends Component {
                                 {!!(selectedRoomInfo) ? (
                                     <SelectedRoomComponent roomInfo={selectedRoomInfo} />
                                 ) : (
-                                <div>
-                                    <SlideShow ImageId={1} />
-                                  <SlideShow ImageId={2} />
-                                </div>
-                                  
-                                )}
-                                
-                            </div>
-                            
-                        </div>
+                                        <div>
+                                            <SlideShow ImageId={1} />
+                                            <SlideShow ImageId={2} />
+                                        </div>
 
+                                    )}
+
+                            </div>
+                        </div>
                         {/**Second Row **/}
                         <div className="row">
                             <div className="col-md-6">
                             </div>
                             <div className="col-md-6">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -102,14 +111,15 @@ HomeContainer.propTypes = {
 const mapStateToProps = (state) => {
     const { auth, rooms } = state;
     const isFetching = auth.isFetching || rooms.isFetching;
-
+    const filter = state.filter;
 
     return {
         isFetching,
         selectedRoomId: rooms.selectedRoomId,
-        rooms: rooms.list,
+        rooms: selectFilteredRoom(state),
         userName: selectUserName(state),
-        accomodation: selectUserRoom(state)
+        accomodation: selectUserRoom(state),
+        selectedfilter: filter,
     };
 };
 

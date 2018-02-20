@@ -25,6 +25,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R1",
         imageId: 1,
         guests: 2,
+        roomType: "ROOM",
       },
       {
         id: "stdoc",
@@ -34,6 +35,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R2",
         imageId: 2,
         guests: 3,
+        roomType: "ROOM",
       },
       {
         id: "dlxct",
@@ -43,6 +45,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 3,
         guests: 2,
+        roomType: "ROOM",
       },
       {
         id: "dlxoc",
@@ -52,6 +55,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R4",
         imageId: 4,
         guests: 3,
+        roomType: "ROOM",
       },
       {
         id: "gdlux",
@@ -61,6 +65,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R1",
         imageId: 5,
         guests: 2,
+        roomType: "ROOM",
       },
       {
         id: "royal",
@@ -70,6 +75,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 6,
         guests: 3,
+        roomType: "ROOM",
       },
       {
         id: "ovsuite",
@@ -79,6 +85,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 7,
         guests: 3,
+        roomType: "SUITES",
       },
       {
         id: "gdsuite",
@@ -88,6 +95,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 8,
         guests: 2,
+        roomType: "SUITES",
       },
       {
         id: "dlxsuite",
@@ -97,6 +105,7 @@ const fetchRooms = () => new Promise(
         imageSmall: "R3",
         imageId: 9,
         guests: 3,
+        roomType: "SUITES",
       }
     ]), Math.random() * 100);
   }

@@ -41,3 +41,7 @@ export function RoomSelection(roomId) {
     dispatch(RoomSelected(roomId));
   };
 }
+
+export function setFilter(filter) {
+  return { type: 'SET_FILTER', filter }
+}

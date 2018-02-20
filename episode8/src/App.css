@@ -195,3 +195,12 @@
 	padding: 0;
 	float: right;
 }
+
+#filter span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #af9a5f;
+  font-weight: 400;
+  padding-bottom: 22px;
+}

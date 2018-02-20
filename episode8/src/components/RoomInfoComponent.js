@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class OurRoomComponent extends Component {
+class RoomInfoComponent extends Component {
     render() {
         return (
             <div id="about-hotel" className="mt-3 col-xs-12 col-sm-12 col-md-12 col-centered center-block">
@@ -22,8 +22,8 @@ class OurRoomComponent extends Component {
     }
 }
 
-OurRoomComponent.propTypes = {
+RoomInfoComponent.propTypes = {
 
 };
 
-export default OurRoomComponent;
+export default RoomInfoComponent;
