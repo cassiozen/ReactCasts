@@ -55,16 +55,3 @@ RoomComponent.propTypes = {
 };
 
 export default RoomComponent;
-
-const RoomElement = ({ children, ...props }) => {
-    const { id, roomInfo } = this.props;
-    const _image = id == 1 ? R1 : id == 2 ? R2 : id == 3 ? R3 : R4;
-    return (
-        <div>
-            <img src={_image} width={250} alt="Redux Hotel" />
-            <div>
-                <h4> </h4>
-            </div>
-        </div>
-    );
-}

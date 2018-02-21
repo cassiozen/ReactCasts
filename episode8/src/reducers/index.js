@@ -25,6 +25,8 @@ export const selectUserRoom = createSelector(
   (userReservation, roomList) => roomList.find(room => room.id === userReservation.roomType)
 );
 
+
+/**Filter selectors */
 export const selectedFilter = (state) => state.filter;
 export const selectFilteredRoom = createSelector(
   selectRoomList, selectedFilter,
@@ -40,9 +42,9 @@ export const selectFilteredRoom = createSelector(
   }
 );
 
-
+/**Filter and Sort >>> selectors */
 export const selectedSort = (state) => state.sort;
-export const selectFilteredRoomBySort = createSelector(
+export const selectRoomByFilterAndSort = createSelector(
   selectFilteredRoom, selectedSort,
   (roomList, sortBy) => {
     switch (sortBy) {
@@ -66,5 +68,18 @@ export const selectFilteredRoomBySort = createSelector(
     }
   }
 )
+
+
+/** Selector as Functions 
+ *  Running it as brand new selector as function with out the above functions**/
+export const makeUniqueRoomId = (state, RoomId) => RoomId;
+export const makeSelectRoomByFilterAndSort = () => {
+  return createSelector(
+   [selectRoomList, makeUniqueRoomId],
+   (roomList, id) => {
+    return roomList.find(f => f.imageId === id);
+   } 
+  )
+}
 
 export default reducer;

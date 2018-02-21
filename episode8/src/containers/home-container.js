@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as AuthActions from '../actions/auth';
 import * as RoomActions from '../actions/rooms';
-import { selectUserName, selectUserRoom, selectFilteredRoom, selectFilteredRoomBySort } from '../reducers';
+import { selectUserName, selectUserRoom, selectRoomList, selectFilteredRoom, selectRoomByFilterAndSort } from '../reducers';
 import logo from '../logo.png';
 import '../App.css';
 import RoomComponent from '../components/RoomComponent';
@@ -14,7 +14,7 @@ import RoomInfoComponent from '../components/RoomInfoComponent';
 import SelectedRoomComponent from '../components/SelectedRoomComponent';
 import FilterComponent from '../components/FilterComponent';
 import SortComponent from '../components/SortComponent';
-
+import RoomContainer from './room-container';
 
 class HomeContainer extends Component {
 
@@ -39,7 +39,7 @@ class HomeContainer extends Component {
     render() {
         const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter, selectedSort } = this.props;
         if (isFetching || isFetching === undefined) return <div className="loader" />;
-
+        
         var selectedRoomInfo = rooms.find(data => data.id == selectedRoomId);
 
         console.log("Render HomeContainer >>>");
@@ -72,7 +72,8 @@ class HomeContainer extends Component {
                                         (!isFetching && rooms.length > 0) && rooms.map((data, index) => {
                                             return (
                                                 <div className="col-md-4" key={index}>
-                                                    <RoomComponent key={index} id={data.imageId} roomInfo={data} onClick={this.handleOnRoomSelect} />
+                                                    {/* <RoomComponent key={index} id={data.imageId} roomInfo={data} onClick={this.handleOnRoomSelect} /> */}
+                                                    <RoomContainer key={index} roomId={data.id} />
                                                 </div>
                                             )
                                         })
@@ -114,6 +115,8 @@ HomeContainer.propTypes = {
 
 };
 
+/** */
+
 const mapStateToProps = (state) => {
     const { auth, rooms } = state;
     const isFetching = auth.isFetching || rooms.isFetching;
@@ -123,7 +126,7 @@ const mapStateToProps = (state) => {
     return {
         isFetching,
         selectedRoomId: rooms.selectedRoomId,
-        rooms: selectFilteredRoomBySort(state),
+        rooms: selectRoomList (state), //selectRoomByFilterAndSort(state),
         userName: selectUserName(state),
         accomodation: selectUserRoom(state),
         selectedfilter: filter,

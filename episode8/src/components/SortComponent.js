@@ -9,6 +9,7 @@ class SortComponent extends Component {
 
     render() {
         const { selectedSort } = this.props;
+        console.log("Render SortComponent >>>");
 
         return (
             <select value={selectedSort} onChange={this.handleOnChange} >

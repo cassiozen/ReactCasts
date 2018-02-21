@@ -9,6 +9,7 @@ class FilterComponent extends Component {
 
     render() {
         const { selectedFilter } = this.props;
+        console.log("Render FilterComponent >>>");
 
         return (
             <select value={selectedFilter} onChange={this.handleOnChange} >
