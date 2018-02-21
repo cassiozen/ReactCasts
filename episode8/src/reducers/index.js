@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { createSelector } from 'reselect';
+import { createSelector, createStructuredSelector } from 'reselect';
 import auth, * as fromAuth from './auth';
 import rooms from './rooms';
 import filter from './filter';
@@ -70,16 +70,15 @@ export const selectRoomByFilterAndSort = createSelector(
 )
 
 
-/** Selector as Functions 
- *  Running it as brand new selector as function with out the above functions**/
-export const makeUniqueRoomId = (state, RoomId) => RoomId;
-export const makeSelectRoomByFilterAndSort = () => {
-  return createSelector(
-   [selectRoomList, makeUniqueRoomId],
-   (roomList, id) => {
-    return roomList.find(f => f.imageId === id);
-   } 
-  )
-}
+/*** structured selectors */
+const objectFilter = (state) => state.filter;
+const objectSort   = (state) => state.sort;
+
+export const myStructuredSelector = createStructuredSelector({
+  filterBy: objectFilter,
+  sortBy: objectSort
+});
+
+
 
 export default reducer;

@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as AuthActions from '../actions/auth';
 import * as RoomActions from '../actions/rooms';
-import { selectUserName, selectUserRoom, selectRoomList, selectFilteredRoom, selectRoomByFilterAndSort } from '../reducers';
+import { selectUserName, selectUserRoom, selectRoomList, selectFilteredRoom, selectRoomByFilterAndSort ,myStructuredSelector } from '../reducers';
 import logo from '../logo.png';
 import '../App.css';
 import RoomComponent from '../components/RoomComponent';
@@ -37,11 +37,11 @@ class HomeContainer extends Component {
     }
 
     render() {
-        const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter, selectedSort } = this.props;
+        const { isFetching, userName, accomodation, rooms, selectedRoomId, selectedfilter, selectedSort, structuredObj } = this.props;
         if (isFetching || isFetching === undefined) return <div className="loader" />;
         
         var selectedRoomInfo = rooms.find(data => data.id == selectedRoomId);
-
+        debugger;
         console.log("Render HomeContainer >>>");
         return (
             <div className="App">
@@ -130,7 +130,8 @@ const mapStateToProps = (state) => {
         userName: selectUserName(state),
         accomodation: selectUserRoom(state),
         selectedfilter: filter,
-        selectedSort: sortBy
+        selectedSort: sortBy,
+        structuredObj: myStructuredSelector(state)
     };
 };
 
