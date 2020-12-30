@@ -3206,8 +3206,8 @@ loader-utils@0.2.x, loader-utils@^0.2.11, loader-utils@^0.2.16, loader-utils@^0.
     object-assign "^4.0.1"
 
 lodash-es@^4.2.1:
-  version "4.17.2"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.2.tgz#59011b585166e613eb9dd5fc256b2cd1a30f3712"
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.20.tgz#29f6332eefc60e849f869c264bc71126ad61e8f7"
 
 lodash._arraycopy@^3.0.0:
   version "3.0.0"
