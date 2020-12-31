@@ -1,0 +1,83 @@
+form {
+  width: 300pt;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 12pt;
+}
+
+input {
+  margin-bottom: 3pt;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #f45702;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #383b4e;
+  padding-left: 5px;
+  outline: none;
+  color: #efefef;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #23587d;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+button:hover {
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+input[data-touched="true"]:invalid,
+textarea[data-touched="true"]:invalid {
+  border: 1px solid #ea6263;
+}
+
+.form-reqs {
+  visibility: hidden;
+}
+
+input[data-touched="true"]:invalid ~ .form-reqs,
+textarea[data-touched="true"]:invalid ~ .form-reqs {
+  visibility: visible;
+}
