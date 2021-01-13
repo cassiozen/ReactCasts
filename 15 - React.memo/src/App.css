@@ -1,0 +1,26 @@
+button {
+  display: block;
+  width: 100%;
+
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: #ededed;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.1s all ease-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  float: left;
+}
+button:hover {
+  background: #301303;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+button:active {
+  background: #4d1e05;
+  color: #fff;
+  border-bottom: 2px solid #f98547;
+}
