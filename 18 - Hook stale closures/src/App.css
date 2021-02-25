@@ -1,0 +1,29 @@
+.app {
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+  padding: 50px 24px;
+  background-color: #282c35;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 #1a1c20;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  align-self: flex-end;
+}
+
+.typing-input {
+  resize: none;
+  width: inherit;
+  height: 10em;
+  background-color: transparent;
+  color: #ededed;
+  font-family: inherit;
+  font-size: inherit;
+}
